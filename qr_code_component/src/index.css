@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --slate-300: rgb(213, 255, 239);
+    --slate-500: rgb(104, 119, 141);
+    --slate-900: rgb(31, 49, 79);
+    --white: rgb(255, 255, 255);
+}
+
+.card-title {
+    color: var(--slate-900);
+    font-family: "Outfit", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 1.2;
+}
+
+.card-description {
+    color: var(--slate-500);
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
