@@ -3,6 +3,13 @@ import { serveDir } from "@std/http/file-server";
 function handler(req: Request) {
   const url = new URL(req.url);
   const pathname = decodeURIComponent(url.pathname);
+  console.log("Pathname", pathname);
+
+  if (pathname.startsWith("/images")) {
+    if (req.method === "GET") {
+      return serveDir(req, {});
+    }
+  }
 
   if (pathname.startsWith("/")) {
     if (req.method === "GET") {
