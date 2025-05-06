@@ -6,4 +6,12 @@
     "@std/assert": "jsr:@std/assert@1",
     "@std/http": "jsr:@std/http@^1.0.15"
   },
+  "deploy": {
+    "project": "a76089e9-5935-4ed3-8568-84e635532385",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "main.ts"
+  }
 }
