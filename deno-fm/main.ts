@@ -1,6 +1,8 @@
 import { serveDir } from "@std/http/file-server";
 
 const ROUTE_ROOT_NAME = "routes";
+
+const BLOG_PREVIEW_CARD_PATH = "/blog-preview-card";
 const QR_CODE_COMPONENT_PATH = "/qr-code-component";
 
 function handler(req: Request) {
@@ -9,6 +11,7 @@ function handler(req: Request) {
 
   if (!pathname.includes(ROUTE_ROOT_NAME)) {
     if (
+      pathname.startsWith(BLOG_PREVIEW_CARD_PATH) ||
       pathname.startsWith(QR_CODE_COMPONENT_PATH)
     ) {
       if (req.method === "GET") {
