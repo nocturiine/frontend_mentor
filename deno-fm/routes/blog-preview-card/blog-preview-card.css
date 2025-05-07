@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
-h2,
+h1,
 p {
     color: var(--gray-950);
     font-family: "Figtree", sans-serif;
@@ -46,7 +46,7 @@ p {
     justify-items: start;
     row-gap: 12px;
 
-    >h2 {
+    h1 {
         font-size: 24px;
         font-weight: 800;
 
