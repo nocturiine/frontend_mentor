@@ -1,30 +1,26 @@
 import { serveDir } from "@std/http/file-server";
 
-const ROUTE_ROOT_NAME = "routes";
+const ROUTES_FS_ROOT = "routes";
 
-const BLOG_PREVIEW_CARD_PATH = "/blog-preview-card";
-const QR_CODE_COMPONENT_PATH = "/qr-code-component";
+const STATIC_ROUTE = new URLPattern({ pathname: "/static/*"});
+const BLOG_PREVIEW_CARD_ROUTE = new URLPattern({ pathname: "/blog-preview-card*" });
+const QR_CODE_COMPONENT_ROUTE = new URLPattern({ pathname: "/qr-code-component*" });
 
 function handler(req: Request) {
-  const url = new URL(req.url);
-  const pathname = decodeURIComponent(url.pathname);
-
-  if (!pathname.includes(ROUTE_ROOT_NAME)) {
-    if (
-      pathname.startsWith(BLOG_PREVIEW_CARD_PATH) ||
-      pathname.startsWith(QR_CODE_COMPONENT_PATH)
-    ) {
-      if (req.method === "GET") {
-        return serveDir(req, {
-          fsRoot: ROUTE_ROOT_NAME,
-        });
-      }
-    }
-
-    return serveDir(req, {
-      showDirListing: true,
-    });
+  if(BLOG_PREVIEW_CARD_ROUTE.exec(req.url) || QR_CODE_COMPONENT_ROUTE.exec(req.url)) {
+	if (req.method === "GET") {
+        	return serveDir(req, {
+          		fsRoot: ROUTES_FS_ROOT, 
+        	});
+	}
   }
+
+  if(STATIC_ROUTE.exec(req.url)) {
+	  if(req.method === "GET") {
+		  return serveDir(req);
+	  }
+  }
+
   return new Response("404 Not Found", { status: 404 });
 }
 
