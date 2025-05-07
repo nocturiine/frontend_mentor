@@ -16,7 +16,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Links
 
 - Solution URL: [GitHub](https://github.com/nocturiine/frontend_mentor/tree/main/deno-fm/routes/qr-code-component/)
-- Live Site URL: [Deno Deploy](https://neat-trout-40.deno.dev/qr-code-component/)
+- Live Site URL: [Deno Deploy](https://real-bobcat-78.deno.dev/qr-code-component/)
 
 ## My process
 
