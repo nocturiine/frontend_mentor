@@ -47,13 +47,13 @@ p {
     row-gap: 12px;
 
     h1 {
-	    cursor: pointer;
+        cursor: pointer;
         font-size: 24px;
         font-weight: 800;
 
-	&:hover {
-		color: var(--yellow);
-	}
+        &:hover {
+            color: var(--yellow);
+        }
 
         @media (max-width: 375px) {
             font-size: 20px;
