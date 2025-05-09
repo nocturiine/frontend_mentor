@@ -1,44 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-h1, p, li {
+h1,
+p,
+li {
 	color: var(--white);
 	font-family: "Inter", sans-serif;
 	margin: 0px;
 	text-align: center;
 }
 
-p:first-of-type {
-	color: var(--green);
-}
-
-p:last-of-type {
-	color: var(--gray-500);
-}
-
-ul {
-	list-style-type: none;
-	display: grid;
-	margin: 0px;
-	padding: 0px;
-	row-gap: 24px;
-}
-
-li {
-	background-color: var(--gray-700);
-	border-radius: 12px;
-}
-
-a {
-	color: white;
-	display: block;
-	text-decoration: none;
-	padding-block: 12px;
-	width: 100%;
-
-	&:hover {
-		color: var(--gray-500);
-	}
-}
 
 .content {
 	background-color: var(--gray-900);
@@ -51,11 +21,57 @@ a {
 	background-color: var(--gray-800);
 	border-radius: 24px;
 	display: grid;
-	padding: 24px;
-	row-gap: 16px;
+	padding: 40px;
 
 	img {
 		border-radius: 50%;
 		justify-self: center;
 	}
+
+	header {
+		display: grid;
+		font-weight: 600;
+		margin-top: 28px;
+		row-gap: 16px;
+
+		p {
+			color: var(--green);
+			font-size: 14px;
+		}
+	}
+
+	>p {
+		color: hsl(from var(--white) h s l / 50%);
+		margin-top: 32px;
+		font-size: 12px;
+	}
+
+	ul {
+		list-style-type: none;
+		display: grid;
+		margin: 28px 0px 0px 0px;
+		padding: 0px;
+		row-gap: 16px;
+
+		li {
+			background-color: var(--gray-700);
+			border-radius: 12px;
+
+			a {
+				color: var(--white);
+				display: block;
+				font-size: 12px;
+				font-weight: 700;
+				text-decoration: none;
+				padding-block: 16px;
+				width: 304px;
+
+				&:hover {
+					color: var(--gray-500);
+				}
+			}
+		}
+
+	}
+
 }
