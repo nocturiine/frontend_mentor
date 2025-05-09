@@ -39,4 +39,4 @@ I want to continue using Deno as my runtime for rendering and routing.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/nocturiine)
+- Frontend Mentor - [@nocturiine](https://www.frontendmentor.io/profile/nocturiine)
