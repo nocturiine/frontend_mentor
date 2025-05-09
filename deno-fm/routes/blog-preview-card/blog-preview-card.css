@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
+body {
+    background-color: var(--yellow);
+}
+
 h1,
 p {
     color: var(--gray-950);
@@ -10,13 +14,12 @@ p {
     line-height: 150%;
     margin: 0;
 
-    @media (max-width: 375px) {
+    @media (max-width: var(--max-mobile-width)) {
         font-size: 12px;
     }
 }
 
 .content {
-    background-color: var(--yellow);
     display: grid;
     height: 100dvh;
     place-content: center center;
@@ -38,6 +41,7 @@ p {
 
 .card-image {
     border-radius: 10px;
+    vertical-align: top;
     width: 100%;
 }
 
@@ -55,7 +59,7 @@ p {
             color: var(--yellow);
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: var(--max-mobile-width)) {
             font-size: 20px;
         }
     }
@@ -70,7 +74,7 @@ p {
         color: var(--gray-500);
         font-size: 16px;
 
-        @media (max-width: 375px) {
+        @media (max-width: var(--max-mobile-width)) {
             font-size: 14px;
         }
     }
@@ -85,7 +89,7 @@ p {
     p {
         font-weight: 800;
 
-        @media (max-width: 375px) {
+        @media (max-width: var(--max-mobile-width)) {
             font-size: 14px;
         }
     }

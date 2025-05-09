@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+body {
+	background-color: var(--gray-900);
+}
+
 h1,
 p,
 li {
@@ -11,7 +15,6 @@ li {
 
 
 .content {
-	background-color: var(--gray-900);
 	display: grid;
 	height: 100dvh;
 	place-content: center center;
@@ -48,7 +51,7 @@ li {
 		margin-top: 32px;
 		font-size: 14px;
 
-		@media(max-width: 375px) {
+		@media(max-width: var(--max-mobile-width)) {
 			font-size: 12px;
 		}
 	}
