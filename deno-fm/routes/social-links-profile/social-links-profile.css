@@ -19,8 +19,11 @@ li {
 
 .card {
 	background-color: var(--gray-800);
-	border-radius: 24px;
+	border-radius: 20px;
+	box-sizing: border-box;
 	display: grid;
+	margin-inline: 24px;
+	min-width: 327px;
 	padding: 40px;
 
 	img {
@@ -43,7 +46,11 @@ li {
 	>p {
 		color: hsl(from var(--white) h s l / 50%);
 		margin-top: 32px;
-		font-size: 12px;
+		font-size: 14px;
+
+		@media(max-width: 375px) {
+			font-size: 12px;
+		}
 	}
 
 	ul {
@@ -55,19 +62,24 @@ li {
 
 		li {
 			background-color: var(--gray-700);
-			border-radius: 12px;
+			border-radius: 8px;
+			width: 100%;
+
+			&:hover {
+				background-color: var(--green);
+			}
 
 			a {
 				color: var(--white);
 				display: block;
-				font-size: 12px;
+				font-size: 14px;
 				font-weight: 700;
 				text-decoration: none;
 				padding-block: 16px;
-				width: 304px;
+				width: 100%;
 
 				&:hover {
-					color: var(--gray-500);
+					color: var(--gray-700);
 				}
 			}
 		}
