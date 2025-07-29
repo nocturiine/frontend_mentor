@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+        background-color: var(--cream);
+}
+
+main {
+        display: grid;
+        height: 100dvh;
+        place-content: center center;
+}
+
+img {
+        display: block;
+        width: 100%;
+}
+
+article {
+        padding: 32px;
+}
+
+h1 {
+        color: var(--black-neutral);
+        font-family: "Fraunces", sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 0px;
+        margin-top: 16px;
+}
+
+p {
+        color: var(--gray-neutral);
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        margin: 0px;
+}
+
+button {
+        background-color: var(--green-500);
+        border-radius: 16px;
+        border-width: 0px;
+        color: var(--white);
+        display: flex;
+        flex-wrap: wrap;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        height: 48px;
+        margin-top: 20px;
+        place-content: center center;
+        width: 100%;
+
+        &:active {
+                background-color: var(--green-700);
+        }
+
+        &:hover {
+                background-color: var(--green-700);
+                cursor: pointer;
+        }
+
+        >img {
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+        }
+
+        >span {
+                margin-left: 12px;
+        }
+}
+
+.card {
+        background-color: var(--white);
+        border-radius: 16px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template: auto / repeat(2, 1fr);
+        height: 100%;
+        max-height: 450px;
+        max-width: 600px;
+        width: 100%;
+
+        @media (max-width: 768px) {
+                grid-auto-flow: row;
+                grid-template: none;
+                max-height: unset;
+                margin: 0 auto;
+                width: calc(100% - 28px);
+        }
+}
+
+.product {
+        border-bottom-left-radius: 16px;
+        border-top-left-radius: 16px;
+
+        @media (max-width: 768px) {
+                border-bottom-left-radius: 0px;
+                border-top-left-radius: 16px;
+                border-top-right-radius: 16px;
+        }
+}
+
+.label {
+        letter-spacing: 6px;
+        text-transform: uppercase;
+}
+
+.description {
+        line-height: calc(1 + calc(5/6));
+        margin-top: 24px;
+}
+
+.price {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        margin-top: 24px;
+
+        >span {
+                &:first-child {
+                        color: var(--green-500);
+                        font-size: 32px;
+                }
+
+                &:last-child {
+                        margin-left: 20px;
+                        text-decoration: line-through;
+                }
+        }
+}
