@@ -8,6 +8,9 @@ const fileRoutes = [
     pathname: "/blog-preview-card*",
   }),
   new URLPattern({
+    pathname: "/product-preview-card-component*",
+  }),
+  new URLPattern({
     pathname: "/qr-code-component*",
   }),
   new URLPattern({ pathname: "/recipe-page*" }),
